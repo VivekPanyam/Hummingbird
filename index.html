@@ -1,0 +1,195 @@
+<html>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+}
+.devices {
+	width: 960px;
+	margin: 0px auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+.tab {
+	width: 24% !important;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.xperia {
+	position: absolute;
+	right: 24%;
+	bottom: 0;
+}
+.imac, .macbook {
+	width: 49%;
+}
+
+.phones {
+	position: absolute;
+	left: 0px;
+	bottom: 0%;
+	width: 49%;
+}
+
+.phones img {
+	width: 16%;
+}
+
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
+	font-size: 20px;
+}
+
+.logo img {
+	width: 20%;
+}
+
+.content { 
+	width: 960px;
+	margin: 0px auto;
+}
+
+.supported, .features, .usage, .installation {
+	margin-bottom: 50px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+.supported table {
+	text-align: center;
+	margin: 0px auto;
+}
+
+.supported table td {
+	padding: 10px;
+}
+
+.split div {
+	width:49%;
+	float:left;
+}
+.installation {
+	text-align: center;
+}
+.usage code {
+	text-align: center;
+}
+.center {
+	text-align: center;
+	width: 100%;
+}
+.center img {
+	padding: 10px;
+}
+</style>
+<div class="content">
+	<div class="logo">
+		<img src="logo.png">
+		<div>Preview mockups and webpages from your computer on target devices in realtime.</div>
+	</div>
+	<div class="devices">
+	<img class="imac" src="imac.png"/>
+	<img class="macbook" src="macbook.png"/>
+	<div class="phones">
+		<img class="iphone" src="iphone.png"/>
+		<img class="nexus" src="nexus4.png"/>
+		<img class="xperia" src="xperia.png"/>
+		<img class="tab" src="galaxytab.png"/>
+	</div>
+	</div>
+	<div class="supported">
+		<h1>Supported Devices</h1>
+		<h2>Target Devices</td>
+		<table border="0">
+			<tr>
+				<td><b>Android Devices</b></td>
+				<td><b>iOS Devices</b></td>
+				<td><b>Windows Phone Devices</b></td>
+				<td><b>Computers</b></td>
+				<td><b>Other Devices</b></td>
+				
+			</tr>
+			<tr>
+				<td>Native App</td>
+				<td>Webapp (in Safari)</td>
+				<td>Webapp (in IE10)</td>
+				<td>Webapp (in Chrome/Firefox)</td>
+				<td>Webapp (in browsers that support Websockets)</td>
+			</tr>
+		</table>
+		<h2>Development Devices</td>
+		<table border="0">
+			<tr>
+				<td><b>Windows</b></td>
+				<td><b>Mac</b></td>
+				<td><b>Linux</b></td>			
+			</tr>
+			<tr>
+				<td colspan="3">Node.js Application</td>
+			</tr>
+		</table>
+	</div>
+	<div class="features">
+		<h1>Features</h1>
+		<div class="split">
+			<div>
+				<h2>Realtime</h2>
+				Hummingbird pushes changes to target devices whenever you save a file in your project directory.
+			</div>
+			<div>
+				<h2>Filetypes</h2>
+				Currently, Hummingbird supports HTML files (.htm and .html files) and images (.png files). It can be easily extended to send any other type of file that is viewable in a browser.
+			</div>
+		</div>
+		<div class="split">
+			<div>
+				<h2>Send Files</h2>
+				If you want to view a file without editing it, just type the filename into the Hummingbird Console. This file will be sent to all connected target devices.
+			</div>
+			<div>
+				<h2>Open Source</h2>
+				Hummingbird is MIT Licensed. The source code for the Hummingbird Console is <a href="https://github.com/VivekPanyam/Hummingbird">here</a>. The source for the Android App will be available soon. Pull requests welcome!
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="installation">
+		<h1>Installation</h1>
+		<h2>Installing the Hummingbird Console</h2>
+		Requires Node.js and NPM. Open a shell and run the following:<br><br>
+		<code>npm install hummingbird-server -g</code>
+		<h2>Installing the Android App (optional)</h2>
+		<a href="https://play.google.com/store/apps/details?id=com.vivekpanyam.hummingbird">Download it from Google Play.</a>
+	</div>
+	<div class="usage">
+		<h1>Usage</h1>
+		<h2>Running the Hummingbird Console</h2>
+		Open a shell in your project directory and run one of the following:<br><br>
+		<div class="center">
+			<code>
+				hummingbird<br>
+				hummingbird port<br>
+				hummingbird port ip_to_bind_to
+			</code>
+		</div>
+		<br>
+		On target devices, go to <code>http://server-ip:(port + 1)/</code> where <code>server-ip</code> is the IP that the Hummingbird Console is running on and <code>port</code> is the port entered above (defaults to 8080 if not specified).
+		<h2>Setting up the android App</h2>
+		Open the Android App. You should see the screen on the left below. Swipe up from the bottom (or top) of the screen and hit the menu icon. Click "Settings" and you should see the screen on the right below. Enter the <code>server-ip</code> and <code>port</code> (note not <code>port + 1</code>). Restart the app and it should connect!<br>
+		<div class="center">
+			<img src="screenshot1.png"/>
+			<img src="screenshot2.png"/>
+		</div>
+	</div>
+	<div class="footer center">
+		&copy; 2014 Vivek Panyam
+	</div>
+</div>
+</html>
