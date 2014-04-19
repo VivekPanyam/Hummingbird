@@ -1,4 +1,4 @@
-See http://blog.vivekpanyam.com/hummingbird-preview-designs-on-a-mobile-device-in-realtime/
+See http://blog.vivekpanyam.com/hummingbird-preview-mockups-on-devices-in-realtime/
 
 ### License
 MIT License
