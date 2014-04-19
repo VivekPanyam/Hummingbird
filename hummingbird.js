@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// Usage: node app port directory host
-
 // Web Sockets
 var WebSocketServer = require('ws').Server,
     wss = new WebSocketServer({host: process.argv[3], port: process.argv[2] || 8080}),
